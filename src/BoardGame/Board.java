@@ -34,4 +34,11 @@ public class Board {
 	public Piece piece(Position position) {
 		return pieces[position.getRow()][position.getColumn()];
 	}
+	
+	public void placePiece(Piece piece, Position position) {
+		/*vai na matriz pieces(q foi declarada e instanciada no tabuleiro 
+		pega linha e coluna e atribui uma peça que foi passada de argumento*/
+		pieces[position.getRow()][position.getColumn()] = piece;
+		piece.position = position; //para informar que a posicao nao é nula
+	}
 }
